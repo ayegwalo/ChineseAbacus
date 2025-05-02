@@ -41,5 +41,29 @@ public class AbacusApp extends JFrame {
         setVisible(true);
     }
 
+    private void doOperation(String op) {
+        try {
+            int a = Integer.parseInt(input1.getText());
+            int b = Integer.parseInt(input2.getText());
+            int result = 0;
+
+            switch (op) {
+                case "+": result = a + b; break;
+                case "-": result = a - b; break;
+                case "*": result = a * b; break;
+                case "/": result = b != 0 ? a / b : 0; break;
+            }
+
+            abacus.setNumber(result);
+            resultLabel.setText("Result: " + abacus.getNumber());
+
+        } catch (NumberFormatException ex) {
+            resultLabel.setText("Invalid input.");
+        }
+    }
+
+    public static void main(String[] args) {
+        new AbacusApp();
+    } 
    
 }
