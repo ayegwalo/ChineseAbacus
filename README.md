@@ -13,8 +13,8 @@ A Java application that simulates a Chinese abacus. Test your application by per
 
 
 **HOW TO RUN**
-javac *.java
-java AbacusApp
+- javac *.java
+- java AbacusApp
 
 
 **Educational Purpose**
